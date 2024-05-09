@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="8sp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15sp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/download_card"
+    android:background="#FFFFFF"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="5dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginBottom="2dp"
+    android:layout_marginLeft="2dp">
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:weightSum="1"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:orientation="vertical">
+            <ProgressBar
+                android:id="@+id/hpb"
+                android:progressDrawable="@drawable/green_progress_drawable"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="25sp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:minWidth="200dp"
+                android:minHeight="50dp"
+                android:progress="0" />
+            <!--        <com.example.votingapp.ProgressLibrary.HorizontalProgressBar-->
+            <!--            android:id="@+id/hpb"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            app:inside_padding="0dp"-->
+            <!--            app:primary_color="#CDCFDC"-->
+            <!--            app:primary_thickness="30dp"-->
+            <!--            app:shape="rect"-->
+            <!--            android:layout_marginTop="18sp"-->
+            <!--            android:layout_marginLeft="10sp"-->
+            <!--            android:layout_marginRight="10sp"-->
+            <!--            android:layout_marginBottom="10sp"-->
+            <!--            app:text_color="#000000"-->
+            <!--            app:text_enable="true"-->
+            <!--            app:text_size="16sp" />-->
+            <TextView
+                android:id="@+id/name"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="name"
+                android:textAlignment="center"
+                android:layout_marginRight="5sp"
+                android:layout_marginLeft="5sp"
+                android:background="#10FFFFFF"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/votesPercentage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/hpb"
+                android:text="0%"
+                android:layout_marginTop="10dp"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/setBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:layout_below="@+id/valueET"
+                android:layout_centerHorizontal="true"
+                android:text="Vote" />
+
+            />
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hpb"
+                android:layout_marginTop="2dp"
+                android:text="Total Votes"
+                android:inputType="number" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
